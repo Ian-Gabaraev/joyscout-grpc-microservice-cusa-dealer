@@ -6,11 +6,15 @@ beautifulsoup4==4.9.3
 bs4==0.0.1
 certifi==2020.12.5
 chardet==3.0.4
+grpcio==1.35.0
+grpcio-tools==1.30.0
 idna==2.10
 multidict==5.1.0
-psstore4-ru==1.0.0
+protobuf==3.15.1
+psstore-ru==2.0.0
 PyYAML==5.4.1
 requests==2.25.1
+six==1.15.0
 soupsieve==2.2
 typing-extensions==3.7.4.3
 urllib3==1.26.3

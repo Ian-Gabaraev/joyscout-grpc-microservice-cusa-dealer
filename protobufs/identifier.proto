@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+/* The request body contains an optional
+'representation' parameter which may be equal
+to 'CUSA' or 'URL' */
+
+enum IdentifierOption {
+    CUSA = 0;
+    URL = 1;
+}
+
+message IdentifierRequest {
+  IdentifierOption identifier_option = 1;
+}
+
+/* The Identifier contains just one required string */
+message Identifier {
+  string identifier = 1;
+}
+
+/* Using enum to allow an array of identifiers in response */
+message IdentifierResponse {
+  repeated Identifier identifiers = 1;
+}
+
+/* Defining the service */
+service Identifiers {
+  rpc GetIdentifiers (IdentifierRequest) returns (IdentifierResponse);
+}
